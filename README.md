@@ -1,30 +1,24 @@
 # 🏦 Loan Approval Automation System
 
-An end-to-end loan approval workflow automation project built using **Dialogflow**, **n8n**, and **Google Sheets**. The system automates loan application processing, eligibility verification, record management, and customer notifications, reducing manual effort and improving response time.
+An intelligent workflow automation project that streamlines the loan approval process using **Dialogflow**, **n8n**, and **Google Sheets**. The system automates loan application collection, eligibility assessment, record management, and notification delivery, reducing manual effort and improving efficiency.
 
 ---
 
-## 📋 Project Description
+## 📋 Project Overview
 
-The Loan Approval Automation System is designed to automate the initial stages of loan processing through an AI-powered chatbot and workflow automation platform.
+The Loan Approval Automation System enables users to apply for loans through a Dialogflow chatbot. The submitted information is automatically processed through an n8n workflow, where predefined eligibility rules determine whether the application should be approved, rejected, or marked as pending.
 
-Users submit their loan details through a Dialogflow chatbot. The collected information is transferred to an n8n workflow, where predefined business rules evaluate the application. Based on the assessment, the application is marked as:
-
-- ✅ Approved
-- ❌ Rejected
-- ⏳ Pending Review
-
-The application data is automatically stored in Google Sheets, and status notifications are generated accordingly.
+The application details are stored in Google Sheets, and automated notifications are sent based on the loan status.
 
 ---
 
-## 🎯 Project Objectives
+## 🎯 Objectives
 
 - Automate the loan application process.
-- Minimize manual intervention.
-- Improve response time for applicants.
-- Centralize application records.
-- Demonstrate practical implementation of workflow automation tools.
+- Eliminate repetitive manual work.
+- Improve processing speed and accuracy.
+- Store applicant data centrally.
+- Demonstrate workflow automation using no-code tools.
 
 ---
 
@@ -35,8 +29,8 @@ The application data is automatically stored in Google Sheets, and status notifi
 | Dialogflow | Conversational AI Chatbot |
 | n8n | Workflow Automation |
 | Google Sheets | Data Storage |
-| Webhooks | Data Exchange |
-| Gmail / Email Service | User Notifications |
+| Webhooks | Data Transfer |
+| Email Notifications | Status Alerts |
 
 ---
 
@@ -44,51 +38,51 @@ The application data is automatically stored in Google Sheets, and status notifi
 
 ```mermaid
 flowchart TD
-    A[User] --> B[Dialogflow Chatbot]
+    A[Applicant] --> B[Dialogflow Chatbot]
     B --> C[Webhook]
     C --> D[n8n Workflow]
 
-    D --> E[Eligibility Check]
+    D --> E[Eligibility Evaluation]
     E --> F[Google Sheets Database]
 
     E --> G[Approved]
     E --> H[Rejected]
     E --> I[Pending]
 
-    G --> J[Approval Notification]
-    H --> K[Rejection Notification]
-    I --> L[Pending Notification]
+    G --> J[Approval Alert]
+    H --> K[Rejection Alert]
+    I --> L[Pending Alert]
 ```
 
 ---
 
-## ⚙️ Workflow
+## ⚙️ Workflow Process
 
 ### Step 1: User Interaction
-The applicant interacts with the Dialogflow chatbot and provides loan-related information.
+The applicant interacts with the Dialogflow chatbot and submits loan-related information.
 
 ### Step 2: Data Collection
 The chatbot collects:
 - Applicant Name
-- Loan Amount
 - Monthly Income
+- Loan Amount
 - Employment Details
-- Other relevant information
+- Other Required Information
 
 ### Step 3: Workflow Trigger
-The collected data is sent to n8n using a webhook.
+Dialogflow sends the collected information to n8n using a webhook.
 
-### Step 4: Eligibility Assessment
-The workflow evaluates the application based on predefined conditions.
+### Step 4: Eligibility Check
+The workflow evaluates the application using predefined approval criteria.
 
 ### Step 5: Data Storage
-Application details are recorded in Google Sheets for future reference.
+Application details are automatically stored in Google Sheets.
 
-### Step 6: Decision Generation
+### Step 6: Status Generation
 The application is categorized as:
-- Approved
-- Rejected
-- Pending
+- ✅ Approved
+- ❌ Rejected
+- ⏳ Pending Review
 
 ### Step 7: User Notification
 A corresponding notification is generated and delivered to the applicant.
@@ -99,45 +93,45 @@ A corresponding notification is generated and delivered to the applicant.
 
 ### n8n Workflow
 
-![n8n Workflow](assets/n8n-workflow.png)
+![n8n Workflow](assetn8n-workflow.ow.pnj.png)
 
 ### Google Sheets Database
 
-![Google Sheets](assets/google-Sheets.png)
+![Google Sheets](assetsgoogle-Sheets.pnj.png)
 
 ### Approval Notification
 
-![Approval Alert](assets/approval-alert.png)
+![Approval Alert](assetapproval-alert.pnj.png)
 
 ### Rejection Notification
 
-![Rejection Alert](assets/rejection-alert.png)
+![Rejection Alert](assetrejection-alert.pnj.png)
 
 ### Pending Notification
 
-![Pending Alert](assets/pending-alert.png)
+![Pending Alert](assetpending-alert.pnj.png)
 
 ---
 
 ## ✨ Features
 
-- AI-powered loan inquiry chatbot
-- Automated eligibility checking
-- Workflow automation using n8n
-- Real-time application processing
+- AI-powered chatbot interaction
+- Automated loan eligibility evaluation
+- Real-time workflow automation
 - Google Sheets integration
-- Automated approval, rejection, and pending alerts
-- Scalable and easy-to-maintain architecture
+- Automated status notifications
+- Centralized application tracking
+- No-code/Low-code implementation
 
 ---
 
 ## 📊 Benefits
 
-- Faster application processing
-- Reduced operational workload
+- Faster loan processing
+- Reduced manual intervention
 - Improved customer experience
-- Centralized record management
-- Increased process efficiency
+- Accurate record management
+- Scalable workflow architecture
 
 ---
 
@@ -146,15 +140,11 @@ A corresponding notification is generated and delivered to the applicant.
 ```text
 Loan-Approval-Automation/
 │
-├── assets/
-│   ├── approval-alert.png
-│   ├── rejection-alert.png
-│   ├── pending-alert.png
-│   ├── google-Sheets.png
-│   └── n8n-workflow.png
-│
-├── workflow/
-│   └── loan-approval-workflow.json
+├── assetapproval-alert.pnj.png
+├── assetn8n-workflow.ow.pnj.png
+├── assetpending-alert.pnj.png
+├── assetrejection-alert.pnj.png
+├── assetsgoogle-Sheets.pnj.png
 │
 └── README.md
 ```
@@ -163,25 +153,25 @@ Loan-Approval-Automation/
 
 ## 🚀 Future Enhancements
 
-- Credit score verification integration
+- Credit score integration
 - Banking API integration
 - WhatsApp and SMS notifications
-- Loan analytics dashboard
-- Machine Learning-based risk assessment
-- Document verification automation
+- Analytics Dashboard
+- AI-based loan risk assessment
+- Automated document verification
 
 ---
 
 ## 🎓 Learning Outcomes
 
-This project demonstrates practical knowledge of:
+This project demonstrates practical implementation of:
 
 - Workflow Automation
 - Conversational AI
 - API Integration
 - Business Process Automation
 - Data Management
-- No-Code/Low-Code Development
+- No-Code Development
 
 ---
 
@@ -189,10 +179,8 @@ This project demonstrates practical knowledge of:
 
 **Divyani Kaushal**
 
-B.Com (Hons.) | Finance & Risk Management Enthusiast
-
-LinkedIn: *Add your LinkedIn profile here*
+MBA (Finance) | Finance & Risk Management Enthusiast
 
 ---
 
-⭐ If you found this project useful, consider giving it a star on GitHub.
+⭐ If you found this project helpful, consider giving it a star on GitHub.
