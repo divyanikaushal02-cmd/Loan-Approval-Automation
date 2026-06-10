@@ -84,10 +84,10 @@ Relevant alerts are automatically sent to stakeholders.
 ![Approval Alert](assetapproval-alert.pnj.png)
 
 ### Loan Rejection Alert
-![Rejection Alert](assetrejection-%20alert.pnj.png)
+<img src="./assetrejection-alert.pnj.png" width="900">
 
 ### Pending Alert
-![Pending Alert](asstspending%20-%20alert.pnj.png)
+<img src="./assetpending-alert.pnj.png" width="900">
 
 ---
 
