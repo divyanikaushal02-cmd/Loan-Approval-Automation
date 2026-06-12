@@ -6,88 +6,59 @@ An automated loan approval workflow built using **n8n**, **Google Sheets**, and 
 
 ## 📌 Project Overview
 
-The Loan Approval Automation system automatically processes loan applications stored in Google Sheets and evaluates applicants based on predefined eligibility criteria. Depending on the assessment, the system:
+This workflow automates the loan approval process by:
 
-- ✅ Approves eligible loan applications
-- ❌ Rejects ineligible applications
-- ⚠️ Generates pending alerts for risk monitoring
-- 📧 Sends automated notifications to stakeholders
-
-The workflow is implemented using **n8n**, enabling seamless integration between data sources and notification services.
-
----
-
-## 🚀 Features
-
-- Automated loan application processing
-- Google Sheets integration for data storage
-- Rule-based approval and rejection logic
-- Real-time approval notifications
-- Automated rejection alerts
-- pending/risk monitoring alerts
-- No manual intervention required
-- Easy to customize approval criteria
+- Collecting loan application data
+- Evaluating applicant eligibility
+- Updating records in Google Sheets
+- Sending automated approval, rejection, or pending notifications
+- Reducing manual intervention and processing time
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tools & Technologies
 
-| Technology | Purpose |
-|------------|----------|
-| n8n | Workflow Automation |
-| Google Sheets | Data Storage & Application Tracking |
-| Email/Notification Service | Alert Generation |
-| Business Rules Engine | Loan Decision Logic |
+- **n8n** – Workflow Automation Platform
+- **Google Sheets** – Data Storage & Tracking
+- **Conditional Logic** – Decision-Based Loan Evaluation
+- **Email/Notification System** – Automated Status Alerts
 
 ---
 
-## 📂 Project Structure
+## ⚙️ Workflow Process
 
----
-
-## 🔄 Workflow Process
-
-### Step 1: Application Submission
-Loan applicant details are entered into Google Sheets.
-
-### Step 2: Data Retrieval
-n8n automatically fetches new loan applications.
-
-### Step 3: Eligibility Check
-The workflow evaluates:
-- Applicant income
-- Credit score
-- Existing liabilities
-- Loan amount requested
-
-### Step 4: Decision Making
-Based on predefined rules:
-
-- **Approved** → Approval notification generated
-- **Rejected** → Rejection notification generated
-- **Risk Detected** → Pending alert generated
-
-### Step 5: Notification Delivery
-Relevant alerts are automatically sent to stakeholders.
+1. Loan application data is received.
+2. Applicant details are evaluated based on predefined criteria.
+3. Decision logic determines:
+   - Approved
+   - Rejected
+   - Pending Review
+4. Results are stored in Google Sheets.
+5. Automated notifications are sent to the applicant.
 
 ---
 
 ## 📸 Workflow Screenshots
 
 ### n8n Workflow
-![n8n Workflow](assetn8n-workflow.ow.pnj.png)
+
+![n8n Workflow](n8n-loan-workflow.png)
 
 ### Google Sheets Integration
-<img src="./assetsgoogle-Sheets.pnj.png" width="900">
+
+![Google Sheets Integration](google-sheets-database.png)
 
 ### Loan Approval Alert
-![Approval Alert](assetapproval-alert.pnj.png)
+
+![Loan Approval Alert](loan-approval-alert.png)
 
 ### Loan Rejection Alert
-<img src="./assetrejection-alert.pnj.png" width="900">
+
+![Loan Rejection Alert](loan-rejection-notification.png)
 
 ### Pending Alert
-<img src="./assetpending-alert.pnj.png" width="900">
+
+![Pending Alert](loan-pending-notification.png)
 
 ---
 
@@ -95,35 +66,20 @@ Relevant alerts are automatically sent to stakeholders.
 
 - Faster loan processing
 - Reduced operational costs
-- Consistent decision-making
-- Improved customer experience
-- Enhanced risk monitoring
+- Improved decision consistency
+- Enhanced customer experience
+- Automated record management
 - Reduced manual errors
 
 ---
 
-## 🔧 Future Enhancements
+## 📂 Repository Contents
 
-- AI-based credit risk scoring
-- Integration with banking APIs
-- Machine Learning approval models
-- Dashboard for monitoring applications
-- SMS and WhatsApp notifications
-- Fraud detection module
-
----
-
-## 👨‍💻 Author
-
-**divyanikaushal02-cmd**
-
-Developed as an automation solution for streamlining loan approval and monitoring processes using n8n and Google Sheets.
-
----
-
-## 📄 License
-
-This project is available for educational and demonstration purposes.
-```
-
-This README is professional and suitable for a GitHub project submission, internship portfolio, or academic project.
+```text
+loan-approval-workflow.json       - n8n workflow file
+n8n-loan-workflow.png             - Workflow screenshot
+google-sheets-database.png        - Google Sheets integration screenshot
+loan-approval-alert.png           - Approval notification
+loan-rejection-notification.png   - Rejection notification
+loan-pending-notification.png     - Pending notification
+README.md                         - Project documentation
